@@ -1,4 +1,4 @@
-import config from './config';
+import { apiUrl, plat, srchn } from './config';
 import md5 from 'md5';
 import axios from 'axios';
 
@@ -41,7 +41,7 @@ const getRequestBasicParam = function (url, params){
             args += '&' + key + '=' + params[key];
         });
     }
-    return config.apiUrl + url + '?plat=19&timestamp=' + getTimestamp() + '&ukey=' + getUserUniqueKey() + args;
+    return apiUrl + url + '?plat=' + plat + '&srchn=' + srchn + '&timestamp=' + getTimestamp() + '&ukey=' + getUserUniqueKey() + args;
 }
 
 /**
