@@ -24,7 +24,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch('Vuextest/fetchData', {data: 222222});
-    this.$axios.get('/api/v1/cmm/hot/products',{size: 20,idx: 1,count: 20})
+    this.$axios.get('/api/v1/cmm/hot/products',{size: 20, idx: 1, count: 20})
             .then((res) => {
               console.log(res);
             })

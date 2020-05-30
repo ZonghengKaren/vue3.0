@@ -46,6 +46,9 @@ const getRequestBasicParam = function (url, params){
 
 /**
  * 处理请求结果
+ * @param {Object} res 请求接口返回的数据
+ * @param {Object} resolve 成功回调（200）
+ * @param {Object} reject 异常回调
  */
 const result = function (res,resolve, reject) {
     const data = res.data;
@@ -59,7 +62,7 @@ const result = function (res,resolve, reject) {
 
     // 提示登录
     if (status === 2011) {
-        // 跳转登录页面
+        // 跳转登录
         return;
     }
 
