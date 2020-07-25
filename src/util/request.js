@@ -1,4 +1,4 @@
-import { apiUrl, plat, srchn } from './config';
+import { plat, srchn } from './config';
 import md5 from 'md5';
 import axios from 'axios';
 
@@ -41,7 +41,7 @@ const getRequestBasicParam = function (url, params){
             args += '&' + key + '=' + params[key];
         });
     }
-    return apiUrl + url + '?plat=' + plat + '&srchn=' + srchn + '&timestamp=' + getTimestamp() + '&ukey=' + getUserUniqueKey() + args;
+    return process.env.VUE_APP_API_URL + url + '?plat=' + plat + '&srchn=' + srchn + '&timestamp=' + getTimestamp() + '&ukey=' + getUserUniqueKey() + args;
 }
 
 /**
