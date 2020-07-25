@@ -6,6 +6,7 @@ import request from './util/request'
 import vant from 'vant'
 import 'vant/lib/index.css';
 import 'lib-flexible';
+import '@/assets/style/reset.less'
 
 Vue.use(vant);
 Vue.config.productionTip = false;

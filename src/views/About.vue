@@ -40,11 +40,16 @@
   }
 </script>
 <style lang="less" scoped>
+  @import '@/assets/style/fn.less';
   .title{
     display: flex;
+    position: relative;
+    &:after{
+      .setTopLine()
+    }
     h1 {
-      color: red;
-      font-size: 36px;
+      color: @colorPrimary;
+      font-size: 0.48rem;
     }
   }
 </style>
