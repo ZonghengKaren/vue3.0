@@ -2,8 +2,8 @@
   <div class="home">
     <p>{{getData}}</p>
     <p>{{this.$store.state.data}}</p>
-    <p>1111111</p>
-<!--    <img alt="Vue logo" src="../assets/logo.png" v-if="false">-->
+    <p>11111112223333</p>
+    <img alt="Vue logo" src="../assets/logo.png" v-if="false">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

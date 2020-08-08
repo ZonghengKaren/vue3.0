@@ -10,6 +10,7 @@
       <van-button type="warning">警告按钮</van-button>
       <van-button type="danger">危险按钮</van-button>
     </div>
+    <img alt="Vue logo" src="../assets/001.png"/>
   </div>
 </template>
 <script>

@@ -1,26 +1,138 @@
 @import 'fn.less';
 
-html {
-  -ms-text-size-adjust: 100%;
+body, html {
+  width: 100%;
+  color: #485159;
+  line-height: 1.6;
+  background: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei";
+  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100vh;
 }
 
-body {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: @fontDefault;
+#app {
+  width: 100%;
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -khtml-user-select: none; /*早期浏览器*/
+  -moz-user-select: none; /*火狐*/
+  -ms-user-select: none; /*IE10*/
+  user-select: none;
 }
 
-a img {
-  border: 0;
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 100%;
+  border: none;
+  outline: none;
+  -webkit-user-select: auto;
+  -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
 }
 
 a {
+  background: transparent;
   text-decoration: none;
-  .setTapColor();
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:active {
+  outline: 0;
+}
+
+/*input*/
+button {
+
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  -webkit-appearance: button;
+  text-transform: none;
+  outline: none;
+}
+.placeholder,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #BFBFBF;
+  font-size: 0.24rem;
+}
+input::-webkit-inner-spin-button { /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none; /*去除系统默认appearance的样式,常用于IOS下移除原生样式*/
+}
+input::-webkit-outer-spin-button { /*解决input的type="number"在部分手机端会出现一个小按钮*/
+  -webkit-appearance: none;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+textarea {
+  vertical-align: top;
+}
+button,
+input {
+  line-height: normal;
+}
+input.fixAKeyboard:focus,
+textarea.fixAndroidKeyboard:focus {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+button {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+/**路由默认选中**/
+.router-link-exact-active{
+  color: red;
+  font-weight: bold;
 }
