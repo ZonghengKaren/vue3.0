@@ -41,7 +41,7 @@
   }
 </script>
 <style lang="less" scoped>
-  @import '@/assets/style/fn.less';
+  @import '~@/assets/style/fn.less';
   .title{
     display: flex;
     position: relative;
